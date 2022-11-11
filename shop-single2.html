@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+        </style>
+<head>
+    <title>프몬의 트레이딩 아카데미 - Product Detail Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
+<!--
+    
+TemplateMo 559 Zay Shop
+
+https://templatemo.com/tm-559-zay-shop
+
+-->
+</head>
+
+<body>
+    <!-- Start Top Nav -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
+        <div class="container text-light">
+            <div class="w-100 d-flex justify-content-between">
+                <div>
+                    <i class="fa fa-envelope mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:bty_ej@naver.com" style="font-family:Jua;">bty_ej@naver.com</a>
+                    <i class="fa fa-phone mx-2"></i>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-123-1234" style="font-family:Jua;">010-123-1234</a>
+                </div>
+                <div>
+                    <a class="text-light" href="https://cafe.naver.com/profitmonster" target="_blank" rel="sponsored"><img src="assets/img/cafe.png" width="25" height="25"></a>
+                    <a class="text-light" href="https://blog.naver.com/bty_ej" target="_blank"><img src="assets/img/blog.png" style="width:25px; height:25px; margin-left:5px;"></a>
+                    <a class="text-light" href="https://kmong.com/@%ED%94%84%EB%AA%AC" target="_blank"><img src="assets/img/kmong.png" style="width:25px; height:25px; margin-left:5px;"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Top Nav -->
+
+
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+                <strong style="font-family:Jua;">프몬 아카데미</strong>
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" style="font-family:Jua;">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html" style="font-family:Jua;">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.html" style="font-family:Jua;">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calendar.html" style="font-family:Jua;">Economic Calendar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" style="font-family:Jua;">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                            <div class="input-group-text">
+                                <i class="fa fa-fw fa-search"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                        <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                    </a>
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                    </a>
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"></span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- Modal -->
+    <div class="modal fade bg-white" id="templatemo_search" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="w-100 pt-1 mb-5 text-right">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="" method="get" class="modal-content modal-body border-0 p-0">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="inputModalSearch" name="q" placeholder="Search ...">
+                    <button type="submit" class="input-group-text bg-success text-light">
+                        <i class="fa fa-fw fa-search text-white"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <!-- Open Content -->
+    <section class="bg-light">
+        <div class="container pb-5">
+            <div class="row">
+                <div class="col-lg-5 mt-5">
+                    <div class="card mb-3">
+                        <img class="card-img img-fluid" src="assets/img/shop_02.jpg" alt="Card image cap" id="product-detail">
+                    </div>
+                    <div class="row">
+                        <!--Start Controls-->
+                        <div class="col-1 align-self-center">
+                            <a href="#multi-item-example" role="button" data-bs-slide="prev">
+                                <i class="text-dark fas fa-chevron-left"></i>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </div>
+                        <!--End Controls-->
+                        <!--Start Carousel Wrapper-->
+                        <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel">
+                            <!--Start Slides-->
+                            <div class="carousel-inner product-links-wap" role="listbox">
+
+                                <!--First slide-->
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src="assets/img/shop_02.jpg" alt="Product Image 1">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src="assets/img/detail00.jpg" alt="Product Image 2">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src="assets/img/detail01.jpg" alt="Product Image 3">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/.First slide-->
+
+                                <!--Second slide-->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src="assets/img/detail02.jpg" alt="Product Image 4">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src="assets/img/detail03.jpg" alt="Product Image 5">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src="assets/img/detail04.jpg" alt="Product Image 6">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/.Second slide-->
+
+                                <!--Third slide-->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src="assets/img/detail05.jpg" alt="Product Image 7">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src="assets/img/detail06.jpg" alt="Product Image 8">
+                                            </a>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src="assets/img/detail07.jpg" alt="Product Image 9">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/.Third slide-->
+                                <!--Third slide-->
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <a href="#">
+                                                <img class="card-img img-fluid" src="assets/img/detail08.jpg" alt="Product Image 10">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/.Third slide-->
+                            </div>
+                            <!--End Slides-->
+                        </div>
+                        <!--End Carousel Wrapper-->
+                        <!--Start Controls-->
+                        <div class="col-1 align-self-center">
+                            <a href="#multi-item-example" role="button" data-bs-slide="next">
+                                <i class="text-dark fas fa-chevron-right"></i>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <!--End Controls-->
+                    </div>
+                </div>
+                <!-- col end -->
+                <div class="col-lg-7 mt-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <h1 class="h2" style="font-family:Jua;">Forex PDF</h1>
+                            <p class="detail">Forex 시장에서 성공하기 위한 단 하나의 바이블</p>
+                            <p class="h3 py-2">₩500,000</p>
+                            <p class="py-2">
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <i class="fa fa-star text-warning"></i>
+                                <span class="list-inline-item text-dark">Rating 5.0 | 0 Comments</span>
+                            </p>
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <h6>저자:</h6>
+                                </li>
+                                <li class="list-inline-item">
+                                    <p class="text"><strong>프몬</strong></p>
+                                </li>
+                            </ul>
+
+                            <h6>소개:</h6>
+                            <div class="css-qopeqa e1rfybc42">
+                            
+                            <br>
+
+                            </br>
+                            <h6><strong>자주 묻는 질문:</strong></h6>
+                            <ul class="list-unstyled pb-3">
+                                <li><strong>Q: 초보자도 가능한가요?</strong></li>
+                                <li><strong>A:</strong> 초보자를 위하여, 매매프로그램 설치부터 용어 설명까지 모두 담았습니다.</li>
+                                <li>나쁜 습관과 관점이 없는 초보자들은, 책을 통하여 좋은 습관과 관점을 가질 수 있기에 오히려 초보자들에게 추천합니다.</li><br>
+                                <li><strong>Q: 직장인도 가능한가요?</strong></li>
+                                <li><strong>A:</strong> 네. 직장인도 퇴근 후, 미국 시장을 이용하여 충분히 가능합니다.</li>
+                                
+                                
+                            </ul>
+
+                            <form action="" method="GET">
+                                <input type="hidden" name="product-title" value="Activewear">
+                                <div class="row">
+                                    
+                                </div>
+                                <div class="row pb-3">
+                                    <div class="col d-grid">
+                                        <button type="button" onclick="window.open('https://kmong.com/gig/410973')" class="btn btn-success btn-lg" name="submit" value="buy">Buy</button>
+                                    </div>
+                                    <div class="col d-grid">
+                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">Add To Cart</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Close Content -->
+
+    <!-- Start Article -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row text-left p-2 pb-3">
+                <h4>Other Products</h4>
+            </div>
+
+            <!--Start Carousel Wrapper-->
+            <div id="carousel-related-product">
+
+                
+                <div class="p-2 pb-3">
+                    <div class="product-wap card rounded-0">
+                        <div class="card rounded-0">
+                            <img class="card-img rounded-0 img-fluid" src="assets/img/shop_03.jpg">
+                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                <ul class="list-unstyled">
+                                    <li><a class="btn btn-success text-white" href="shop-single3.html"><i class="far fa-heart"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2" href="shop-single3.html"><i class="far fa-eye"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2" href="shop-single3.html"><i class="fas fa-cart-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <a href="shop-single3.html" class="h3 text-decoration-none" style="font-family:Jua;">Forex 강의</a>
+                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                <li>Forex 차트 마스터 정규 과정</li>
+                                <li class="pt-2">
+                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <p class="text-center mb-0">₩1,500,000</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="p-2 pb-3">
+                    <div class="product-wap card rounded-0">
+                        <div class="card rounded-0">
+                            <img class="card-img rounded-0 img-fluid" src="assets/img/shop_01.jpg">
+                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                <ul class="list-unstyled">
+                                    <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <a href="shop-single.html" class="h3 text-decoration-none" style="font-family:Jua;">재료매매 PDF</a>
+                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                <li>[재료매매 하나로 한국 주식시장 정복하기]</li>
+                                <li class="pt-2">
+                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <p class="text-center mb-0">₩48,000</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-2 pb-3">
+                    <div class="product-wap card rounded-0">
+                        <div class="card rounded-0">
+                            <img class="card-img rounded-0 img-fluid" src="assets/img/shop_02.jpg">
+                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                <ul class="list-unstyled">
+                                    <li><a class="btn btn-success text-white" href="shop-single2.html"><i class="far fa-heart"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2" href="shop-single2.html"><i class="far fa-eye"></i></a></li>
+                                    <li><a class="btn btn-success text-white mt-2" href="shop-single2.html"><i class="fas fa-cart-plus"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <a href="shop-single2.html" class="h3 text-decoration-none" style="font-family:Jua;">Forex PDF</a>
+                            <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                <li>책 한 권으로 차트마스터 FOREX [해외선물] 정복하기</li>
+                                <li class="pt-2">
+                                    <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                    <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                    <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                    <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                    <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                </li>
+                            </ul>
+                            <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                <li>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                    <i class="text-warning fa fa-star"></i>
+                                </li>
+                            </ul>
+                            <p class="text-center mb-0">₩500,000</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+    <!-- End Article -->
+
+
+<!-- Start Footer -->
+<footer class="bg-dark" id="tempaltemo_footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-success border-bottom pb-3 border-light logo" style="font-family:Jua;">프몬 트레이딩 아카데미</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li style="font-family:Jua;">
+                        <i class="fas fa-map-marker-alt fa-fw"></i>
+                        지구 어딘가
+                    </li>
+                    <li>
+                        <i class="fa fa-phone fa-fw"></i>
+                        <a class="text-decoration-none" style="font-family:Jua;" href="tel:010-123-1234">010-123-1234</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope fa-fw"></i>
+                        <a class="text-decoration-none" style="font-family:Jua;" href="mailto:bty_ej@naver.com">bty_ej@naver.com</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light" style="font-family:Jua;">Products</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li><a class="text-decoration-none" href="shop_book_stock.html" style="font-family:Jua;">Stock</a></li>
+                    <li><a class="text-decoration-none" href="shop_forex.html" style="font-family:Jua;">Forex</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 pt-5">
+                <h2 class="h2 text-light border-bottom pb-3 border-light" style="font-family:Jua;">Further Info</h2>
+                <ul class="list-unstyled text-light footer-link-list">
+                    <li><a class="text-decoration-none" href="index.html" style="font-family:Jua;">Home</a></li>
+                    <li><a class="text-decoration-none" href="about.html" style="font-family:Jua;">About Us</a></li>
+                    <li><a class="text-decoration-none" href="calendar.html" style="font-family:Jua;">Economic Calendar</a></li>
+                    <li><a class="text-decoration-none" href="contact.html" style="font-family:Jua;">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="row text-light mb-4">
+            <div class="col-12 mb-3">
+                <div class="w-100 my-3 border-top border-light"></div>
+            </div>
+            <div class="col-auto me-auto">
+                <ul>
+                    <li class="list-inline-item text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://cafe.naver.com/profitmonster"><img src="assets/img/cafe.png" width="48" height="48"></i></a>
+                    </li>
+                    <li class="list-inline-item text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://blog.naver.com/bty_ej"><img src="assets/img/blog.png" width="48" height="48"></i></a>
+                    </li>
+                    <li class="list-inline-item text-center">
+                        <a class="text-light text-decoration-none" target="_blank" href="https://kmong.com/@%ED%94%84%EB%AA%AC"><img src="assets/img/kmong.png" width="48" height="48"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-auto">
+                <label class="sr-only" for="subscribeEmail">Email address</label>
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control bg-dark border-light" id="subscribeEmail" placeholder="Email address">
+                    <div class="input-group-text btn-success text-light" style="font-family:Jua;">Subscribe</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-100 bg-black py-3">
+        <div class="container">
+            <div class="row pt-2">
+                <div class="col-12">
+                    <p class="text-left text-light" style="font-family:Jua;">
+                        Copyright &copy; 2022 프몬의 트레이딩 아카데미 
+                        | Designed by <a rel="sponsored" href="https://kmong.com/gig/410973" target="_blank" style="font-family:Jua;">프몬</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- End Footer -->
+
+    <!-- Start Script -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- End Script -->
+
+    <!-- Start Slider Script -->
+    <script src="assets/js/slick.min.js"></script>
+    <script>
+        $('#carousel-related-product').slick({
+            infinite: true,
+            arrows: false,
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            dots: true,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 3
+                    }
+                }
+            ]
+        });
+    </script>
+    <!-- End Slider Script -->
+
+</body>
+
+</html>
